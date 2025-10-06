@@ -44,7 +44,3 @@ The logic resides in `main.js`:
 - The results update the DOM in real-time without refreshing the page.
 
 Edge cases (like division by zero or blank fields) are handled cleanly by returning `0.00` or `N/A`.
-
----
-
-## 🧩 Project Structure
