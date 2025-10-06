@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel KPI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header>
+          <h1>Hotel KPI Calculator</h1>
+          <p class="subtitle">
+            Calculate key performance indicators in real-time
+          </p>
+        </header>
+
+        <div class="dashboard">
+          <section class="inputs-section">
+            <h2>Core Metrics</h2>
+            <div class="input-group">
+              <label for="totalRooms">Total Rooms Available</label>
+              <input
+                type="number"
+                id="totalRooms"
+                min="0"
+                step="1"
+                placeholder="Enter total rooms"
+                aria-label="Total Rooms Available"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="roomsSold">Rooms Sold</label>
+              <input
+                type="number"
+                id="roomsSold"
+                min="0"
+                step="1"
+                placeholder="Enter rooms sold"
+                aria-label="Rooms Sold"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="totalRevenue">Total Room Revenue ($)</label>
+              <input
+                type="number"
+                id="totalRevenue"
+                min="0"
+                step="0.01"
+                placeholder="Enter revenue"
+                aria-label="Total Room Revenue"
+              />
+            </div>
+          </section>
+
+          <section class="outputs-section">
+            <h2>Key Performance Indicators</h2>
+            <div class="kpi-list">
+              <div class="kpi-item">
+                <div class="kpi-info">
+                  <div class="kpi-label">Occupancy</div>
+                  <div class="kpi-description">Percentage of rooms sold</div>
+                </div>
+                <div class="kpi-value" id="occupancy">-</div>
+              </div>
+
+              <div class="kpi-item">
+                <div class="kpi-info">
+                  <div class="kpi-label">Average Daily Rate (ADR)</div>
+                  <div class="kpi-description">Average revenue per room sold</div>
+                </div>
+                <div class="kpi-value" id="adr">-</div>
+              </div>
+
+              <div class="kpi-item">
+                <div class="kpi-info">
+                  <div class="kpi-label">Revenue Per Available Room (RevPAR)</div>
+                  <div class="kpi-description">Revenue per available room</div>
+                </div>
+                <div class="kpi-value" id="revpar">-</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
